@@ -21,37 +21,37 @@
 <script>
 import api from '../../../api'
 export default {
-    data () {
-        return {
-            userLogin: {
-                account: '',
-                password: ''
-            },
-            rules: {
-                account: [
-                  { required: true, message: '请输入账号', trigger: 'blur,change' }
-                ],
-                password: [
-                  { required: true, message: '请输入密码', trigger: 'blur,change' }
-                ]
-            }
-        }
-    },
-    methods: {
-        loginHandle () {
-            api.login(this.userLogin).then(response => {
-                let result = response.data
-                if (result.Status === 1) {
-                    this.loginError()
-                } else {
-                    console.log('success')
-                }
-            })
-        },
-        loginError () {
-            this.$message.error('登录异常,请重新登录！！')
-        }
+  data () {
+    return {
+      userLogin: {
+        account: '',
+        password: ''
+      },
+      rules: {
+        account: [
+          { required: true, message: '请输入账号', trigger: 'blur,change' }
+        ],
+        password: [
+          { required: true, message: '请输入密码', trigger: 'blur,change' }
+        ]
+      }
     }
+  },
+  methods: {
+    loginHandle () {
+      api.login(this.userLogin).then(response => {
+        let result = response.data
+        if (result.Status === 1) {
+          this.loginError()
+        } else {
+          console.log('success')
+        }
+      })
+    },
+    loginError () {
+      this.$message.error('登录异常,请重新登录！！')
+    }
+  }
 }
 </script>
 

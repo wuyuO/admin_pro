@@ -9,10 +9,10 @@
 import slide from './slide'
 import headtop from './header'
 export default {
-    components: {
-        headtop,
-        slide
-    }
+  components: {
+    headtop,
+    slide
+  }
 }
 </script>
 

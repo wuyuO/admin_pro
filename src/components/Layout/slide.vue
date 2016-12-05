@@ -30,7 +30,7 @@
       </div>
       <div class="g-mn1">
           <div class="g-mn1c">
-              <p>右侧自适应</p>
+              <p></p>
           </div>
       </div>
   </div>
