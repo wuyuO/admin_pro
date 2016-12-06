@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="g-bd1 f-cb">
       <div class="g-sd1">
-          <el-menu default-active="2" :unique-opened="true" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" theme="dark">
+          <el-menu default-active="2" :router="true" :unique-opened="true" class="el-menu-vertical-demo"  theme="dark">
             <el-submenu index="1">
               <template  slot="title"><i class="el-icon-message"></i>个人数据库</template>
                 <el-menu-item index="1-1">我的数据库</el-menu-item>
@@ -9,14 +9,14 @@
             </el-submenu>
             <el-submenu index="2">
               <template  slot="title"><i class="el-icon-message"></i>用户管理</template>
-                <el-menu-item index="2-1">用户信息</el-menu-item>
-                <el-menu-item index="2-2">修改密码</el-menu-item>
+                <el-menu-item index="/home/userInfo">用户信息</el-menu-item>
+                <el-menu-item index="/home/resetPwd">修改密码</el-menu-item>
             </el-submenu>
           </el-menu>
       </div>
       <div class="g-mn1">
           <div class="g-mn1c">
-              <p></p>
+              <router-view></router-view>
           </div>
       </div>
   </div>
@@ -31,6 +31,6 @@ export default {
 /* 两列右侧自适应布局 */
 .g-bd1{margin:0;}
 .g-sd1{position:fixed;float:left;width:220px;margin-right:-190px;height: 100%;background: #324057;}
-.g-mn1{float:right;width:100%;}
+.g-mn1{float:right;width:100%;padding: 15px 15px 15px 0;}
 .g-mn1c{margin-left:230px;}
 </style>

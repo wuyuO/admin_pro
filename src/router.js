@@ -17,7 +17,17 @@ const routes = [
   {
     path: '/home',
     name: 'home',
-    component: require('./components/Layout/layout.vue')
+    component: require('./components/Layout/layout.vue'),
+    children: [
+      {
+        path: 'resetPwd',
+        component: require('./components/User/resetPwd.vue')
+      },
+      {
+        path: 'userInfo',
+        component: require('./components/User/userInfo.vue')
+      }
+    ]
   }
 ]
 export default routes
