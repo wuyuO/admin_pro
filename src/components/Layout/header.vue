@@ -1,14 +1,37 @@
 <template lang="html">
     <div class="m-head">
         <ul class="user_menu">
-            <li>admin</li>
-            <li><el-button size="mini" type="warning">退出<i class="el-icon-d-arrow-right el-icon--right"></i></el-button></li>
+            <li v-text="name"></li>
+            <li><el-button size="mini" @click="toLoginOut" type="warning">退出<i class="el-icon-d-arrow-right el-icon--right"></i></el-button></li>
         </ul>
     </div>
 </template>
 
 <script>
+import api from '../../../api'
+
 export default {
+  data () {
+    return {
+      name: 'no this user'
+    }
+  },
+  created () {
+    this.getCurrUserIfo()
+  },
+  methods: {
+    getCurrUserIfo () {
+      api.currUserIfon().then(response => {
+        let result = response.data.Data
+        this.name = result.Name
+      })
+    },
+    toLoginOut () {
+      api.loginOut().then(response => {
+        this.$router.replace('login')
+      })
+    }
+  }
 }
 </script>
 
