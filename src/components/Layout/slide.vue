@@ -29,8 +29,8 @@ export default {
 
 <style lang="less" scoped>
 /* 两列右侧自适应布局 */
-.g-bd1{margin:0;}
-.g-sd1{position:fixed;float:left;width:220px;margin-right:-190px;height: 100%;background: #324057;}
-.g-mn1{float:right;width:100%;padding: 15px 15px 15px 0;}
-.g-mn1c{margin-left:230px;}
+.g-bd1{margin:0;position:relative;}
+.g-sd1{position:fixed;top:50px;width:220px;margin-right:-190px;height: 100%;background: #324057;}
+.g-mn1{width:100%;padding: 15px 15px 15px 0;}
+.g-mn1c{margin-left:230px;margin-top: 50px;}
 </style>

@@ -38,6 +38,9 @@ export default {
 <style lang="less" scoped>
   .m-head{
     width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
     height: 50px;
     background: #0974c3;
     .user_menu{

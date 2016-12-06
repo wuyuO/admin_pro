@@ -18,6 +18,6 @@ export default {
 
 <style lang="less" scoped>
   .g-hm{
-
+    height: 100%
   }
 </style>
