@@ -10,6 +10,11 @@ const routes = [
     component: require('./components/Login/register.vue')
   },
   {
+    path: '/test',
+    name: 'test',
+    component: require('./components/Database/test.vue')
+  },
+  {
     path: '/forgetpwd',
     name: 'forgetpwd',
     component: require('./components/Login/forgetpwd.vue')
