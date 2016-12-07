@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>MarvinJS</title>
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <!--<script src="lib/marvin/gui/lib/promise-1.0.0.min.js"></script>-->
+    <!--<script src="lib/marvin/gui/gui.nocache.js"></script>-->
+    <script src="lib/marvin/js/marvinjslauncher.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+
+<br/>
+<div class="container">
+    <div class="row">
+        <iframe src="editor.html" id="sketch" class="sketcher-frame"></iframe>
+    </div>
+
+    <br/>
+    <div class="row text-center">
+        <div class="col-sm-3">
+            <button class="btn btn-info" onclick="importMarvinData(exampleData1)">例子1</button>
+        </div>
+        <div class="col-sm-3">
+            <button class="btn btn-success" onclick="importMarvinData(exampleData2)">例子2</button>
+        </div>
+        <div class="col-sm-3">
+            <button class="btn btn-warning" onclick="importMarvinData(exampleData3)">例子3</button>
+        </div>
+        <div class="col-sm-3">
+            <button class="btn btn-primary" onclick="exportMarvinData()">获取数据</button>
+        </div>
+    </div>
+</div>
+
+
+<script src="lib/bootstrap/js/jquery-1.12.4.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+
+<script>
+    $(function () {
+        marvinInitial();
+    });
+</script>
+</body>
+
+</html>

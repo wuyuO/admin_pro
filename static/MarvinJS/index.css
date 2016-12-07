@@ -1,0 +1,20 @@
+iframe {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    box-shadow: 2px 2px 3px #888;
+}
+
+.sketcher-frame {
+    margin: -2px;
+    resize: none;
+
+    min-width: 370px;
+    min-height: 370px;
+
+    height: 600px;
+    /*height: 100%;*/
+    width: 100%;
+
+    overflow: hidden;
+}

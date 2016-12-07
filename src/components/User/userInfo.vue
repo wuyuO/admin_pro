@@ -107,6 +107,9 @@ export default {
             message: result.Msg,
             type: 'success'
           })
+        } else if (result.Status === -8201) {
+          this.$message.error('该用户邮箱已经激活！！')
+          this.getCurrUserIfo()
         } else {
           this.$message.error('发送激活邮件失败！！')
         }
