@@ -109,7 +109,12 @@ export default {
           })
         } else if (result.Status === -8201) {
           this.$message.error('该用户邮箱已经激活！！')
-          this.getCurrUserIfo()
+          api.fleshSession().then(response => {
+            let result = response.data
+            if (result.Status === 0) {
+              this.getCurrUserIfo()
+            }
+          })
         } else {
           this.$message.error('发送激活邮件失败！！')
         }

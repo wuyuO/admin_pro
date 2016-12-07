@@ -48,5 +48,8 @@ export default{
   },
   activeEmail () {
     return Vue.http.get(API_ROOT + 'user/mail/send')
+  },
+  fleshSession () {
+    return Vue.http.put(API_ROOT + 'user/session')
   }
 }
