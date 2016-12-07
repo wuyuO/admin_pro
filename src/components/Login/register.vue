@@ -134,7 +134,8 @@ export default {
   width: 100%;
 }
 .m-login{
-  background: #0766d1;
+  background: url('~assets/img/login_bg.png') no-repeat left top;
+  background-size: cover;
   height: 100%;
   width: 100%;
   overflow: hidden;

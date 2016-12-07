@@ -21,14 +21,19 @@ export default {
   },
   methods: {
     getCurrUserIfo () {
+      let self = this
       api.currUserIfon().then(response => {
         let result = response.data.Data
-        this.name = result.Name
+        if (response.data.Status === 0) {
+          self.name = result.Name
+        } else {
+          self.$router.replace({ path: 'login' })
+        }
       })
     },
     toLoginOut () {
       api.loginOut().then(response => {
-        this.$router.replace('login')
+        this.$router.replace({ path: 'login' })
       })
     }
   }

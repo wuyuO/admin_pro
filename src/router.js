@@ -15,7 +15,17 @@ const routes = [
     component: require('./components/Login/forgetpwd.vue')
   },
   {
-    path: '/home',
+    path: '/ui/user/pwd/reset',
+    name: 'resetPwd',
+    component: require('./components/Login/resetPwd.vue')
+  },
+  {
+    path: '/ui/user/mail/active',
+    name: 'resetPwd',
+    component: require('./components/Login/active.vue')
+  },
+  {
+    path: '/',
     name: 'home',
     component: require('./components/Layout/layout.vue'),
     children: [

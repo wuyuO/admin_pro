@@ -9,8 +9,8 @@
             </el-submenu>
             <el-submenu index="2">
               <template  slot="title"><i class="el-icon-message"></i>用户管理</template>
-                <el-menu-item index="/home/userInfo">用户信息</el-menu-item>
-                <el-menu-item index="/home/resetPwd">修改密码</el-menu-item>
+                <el-menu-item index="/userInfo">用户信息</el-menu-item>
+                <el-menu-item index="/resetPwd">修改密码</el-menu-item>
             </el-submenu>
           </el-menu>
       </div>

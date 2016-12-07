@@ -19,6 +19,15 @@ export default{
   checkPwd (data) {
     return Vue.http.post(API_ROOT + 'user/pwd/check', data)
   },
+  resetPwd (data) {
+    return Vue.http.put(API_ROOT + 'user/pwd', data)
+  },
+  emailResetPwd (data, url) {
+    return Vue.http.put(API_ROOT + url, data)
+  },
+  toActiveEmail (url) {
+    return Vue.http.get(API_ROOT + url)
+  },
   hasEmail (data) {
     let Resource = Vue.resource(API_ROOT + 'user/exist/email/{/Email}')
     return Resource.get(data)
@@ -33,5 +42,11 @@ export default{
   },
   currUserIfon () {
     return Vue.http.get(API_ROOT + 'user/info')
+  },
+  setCurrUser (data) {
+    return Vue.http.put(API_ROOT + 'user/info', data)
+  },
+  activeEmail () {
+    return Vue.http.get(API_ROOT + 'user/mail/send')
   }
 }
